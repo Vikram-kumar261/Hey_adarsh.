@@ -1,263 +1,103 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vikram Kumar Azad</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }body {
-  background: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background: #1e88e5;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background: #1565c0;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.container {
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-footer {
-  background: #1e88e5;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form button {
-  background: #1e88e5;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.ai-helper {
-  background: #e3f2fd;
-  padding: 20px;
-  border-left: 5px solid #2196f3;
-  margin-top: 20px;
-  border-radius: 6px;
-}
-
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #1abc9c;
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
   </style>
-</head><body>
+</head>
+<body>
   <header>
-    <h1>Welcome to Vikram Kumar Azad's World</h1>
-    <p>Author • Thinker • Helper</p>
+    <h1>Welcome to Vikram Kumar Azad's Website</h1>
+    <p>Helping Everyone, Just Like ChatGPT</p>
   </header>  <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#ai-helper">AI Helper</a>
     <a href="#contact">Contact</a>
-  </nav>  <div class="container">
-    <section id="about" class="card">
+  </nav>  <div class="hero">
+    <h2>Your Guide, Your Helper</h2>
+    <p>Learn, Explore, and Grow with Us</p>
+  </div>  <section class="section" id="about">
+    <div class="card">
       <h2>About Me</h2>
-      <p>Hello! I am Vikram Kumar Azad, author of the upcoming book <strong>"Saaf Saaf Seekh"</strong>. I believe in sharing knowledge in a clear and honest way to inspire others.</p>
-    </section><section id="services" class="card">
-  <h2>What I Do</h2>
-  <ul>
-    <li>📘 Write Motivational Books</li>
-    <li>🎤 Share Life Lessons</li>
-    <li>🤝 Help Others Through My Words</li>
-  </ul>
-</section>
-
-<section id="ai-helper" class="card">
-  <h2>🤖 AI Helper</h2>
-  <div class="ai-helper">
-    <p>Hello! I’m your AI helper (like ChatGPT) built into this website. I can help you learn, grow, and stay motivated. Just imagine I’m right here to answer your questions anytime!</p>
-  </div>
-</section>
-
-<section id="contact" class="card">
-  <h2>Contact Me</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="5" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-  </div>  <footer>
-    <p>© 2025 Vikram Kumar Azad | All rights reserved.</p>
+      <p>I'm Vikram Kumar Azad. I believe in clear learning, open knowledge, and helping everyone who needs guidance — just like AI.</p>
+    </div>
+  </section>  <section class="section" id="services">
+    <div class="card">
+      <h2>What I Offer</h2>
+      <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+        <li>✅ Life lessons for youth</li>
+        <li>✅ Clear, honest knowledge</li>
+        <li>✅ Help through learning tools</li>
+        <li>✅ Inspiration from AI and technology</li>
+      </ul>
+    </div>
+  </section>  <section class="section" id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <p>If you want to connect, collaborate or ask any question, reach me via:</p>
+      <p><strong>Email:</strong> yourname@email.com</p>
+      <p><strong>Instagram:</strong> @vikramkumarspeaks</p>
+    </div>
+  </section>  <footer>
+    <p>&copy; 2025 Vikram Kumar Azad. All rights reserved.</p>
   </footer>
-</body></html><!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vikram Kumar Azad</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }body {
-  background: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background: #1e88e5;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background: #1565c0;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.container {
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-footer {
-  background: #1e88e5;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form button {
-  background: #1e88e5;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.ai-helper {
-  background: #e3f2fd;
-  padding: 20px;
-  border-left: 5px solid #2196f3;
-  margin-top: 20px;
-  border-radius: 6px;
-}
-
-  </style>
-</head><body>
-  <header>
-    <h1>Welcome to Vikram Kumar Azad's World</h1>
-    <p>Author • Thinker • Helper</p>
-  </header>  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#ai-helper">AI Helper</a>
-    <a href="#contact">Contact</a>
-  </nav>  <div class="container">
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>Hello! I am Vikram Kumar Azad, author of the upcoming book <strong>"Saaf Saaf Seekh"</strong>. I believe in sharing knowledge in a clear and honest way to inspire others.</p>
-    </section><section id="services" class="card">
-  <h2>What I Do</h2>
-  <ul>
-    <li>📘 Write Motivational Books</li>
-    <li>🎤 Share Life Lessons</li>
-    <li>🤝 Help Others Through My Words</li>
-  </ul>
-</section>
-
-<section id="ai-helper" class="card">
-  <h2>🤖 AI Helper</h2>
-  <div class="ai-helper">
-    <p>Hello! I’m your AI helper (like ChatGPT) built into this website. I can help you learn, grow, and stay motivated. Just imagine I’m right here to answer your questions anytime!</p>
-  </div>
-</section>
-
-<section id="contact" class="card">
-  <h2>Contact Me</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="5" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-  </div>  <footer>
-    <p>© 2025 Vikram Kumar Azad | All rights reserved.</p>
-  </footer>
-</body></html>
+</body>
+</html>
