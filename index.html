@@ -1,11 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Vikram Kumar Azad - Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vikram Kumar Azad — Clear Lesson</title>
+  <meta name="description" content="Official website of Vikram Kumar Azad — Clear Lesson. Simple, straightforward life lessons, services, and contact." />
+  <style>
+    :root{
+      --bg:#0f172a;      /* slate-900 */
+      --panel:#111827;   /* gray-900 */
+      --card:#0b1223;    /* dark card */
+      --text:#e5e7eb;    /* gray-200 */
+      --muted:#9ca3af;   /* gray-400 */
+      --brand:#22c55e;   /* green-500 */
+      --brand-2:#60a5fa; /* blue-400 */
+      --accent:#f59e0b;  /* amber-500 */
+      --danger:#ef4444;  /* red-500 */
+      --shadow:0 10px 25px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font:400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background: radial-gradient(1200px 800px at 10% -10%, #1f2937 0%, transparent 50%), radial-gradient(1000px 700px at 110% -20%, #0e7490 0%, transparent 50%), var(--bg);}    
+    
+    /* Navbar */
+    .nav{position:sticky;top:0;z-index:40;backdrop-filter:saturate(140%) blur(10px);background:rgba(15,23,42,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-wrap{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .brand .logo span{font-weight:800;color:white}
+    .links a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:600}
+    .links a:hover{color:white}
+    .cta{padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));font-weight:700;color:white;text-decoration:none;box-shadow:var(--shadow)}
+
+    /* Sections */
+    section{max-width:1100px;margin:0 auto;padding:60px 18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+    .hero h1{font-size:44px;line-height:1.15;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 20px}
+    .hero .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{padding:8px 12px;border-radius:999px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.45);color:#bbf7d0;font-weight:700}
+    .cover{min-height:320px;display:grid;place-items:center}
+    .cover .book{width:min(90%,380px);aspect-ratio:3/4;border-radius:14px;background:linear-gradient(160deg,#111827,#0b1223 40%, #1f2937 60%);border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .book::after{content:"CLEAR LESSON";position:absolute;inset:auto 12px 16px 12px;letter-spacing:3px;text-align:center;color:white;font-weight:900;font-size:20px}
+    .book .title{position:absolute;inset:18px;display:grid;align-content:center;justify-items:center;gap:10px}
+    .book h2{margin:0;font-size:28px}
+    .book small{color:var(--muted)}
+
+    /* Grid */
+    .grid{display:grid;gap:16px}
+    @media(min-width:850px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1.1fr .9fr}}
+
+    /* About */
+    .about p{margin:0}
+
+    /* Services */
+    .service{padding:18px}
+    .service h3{margin:6px 0 8px}
+
+    /* AI Helper */
+    .ai{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:900px){.ai{grid-template-columns:1.1fr .9fr}}
+    .chat{height:280px;overflow:auto;padding:16px;border-radius:14px;background:#0a0f1f;border:1px solid rgba(255,255,255,.08)}
+    .bubble{max-width:80%;padding:10px 12px;border-radius:14px;margin:8px 0;display:inline-block}
+    .you{background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.4)}
+    .bot{background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.45)}
+    .composer{display:flex;gap:10px;margin-top:10px}
+    .composer input, .composer textarea{flex:1;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0a0f1f;color:var(--text);padding:12px;min-height:44px}
+    .composer button{border:0;border-radius:12px;padding:12px 16px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;font-weight:800;box-shadow:var(--shadow)}
+
+    /* Contact */
+    .contact form{display:grid;gap:10px}
+    .input{border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0a0f1f;color:var(--text);padding:12px}
+
+    /* Footer */
+    footer{padding:50px 18px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);text-align:center}
+    .social a{display:inline-block;margin:0 8px;color:var(--muted);text-decoration:none}
+    .social a:hover{color:#fff}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; margin-top: 50px;">
-  <h1>Welcome to My Website</h1>
-  <h2>I am Vikram Kumar Azad</h2>
-  <p>This is my first website in your page 🚀</p>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo"><span>VA</span></div>
+        <div>Vikram Kumar Azad</div>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#ai">AI Helper</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#book">Get the Book</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div>
+      <div class="badges">
+        <span class="badge">CLEAR • SIMPLE • TRUE</span>
+        <span class="badge" style="background:rgba(245,158,11,.18);border-color:rgba(245,158,11,.5);color:#fed7aa">New</span>
+      </div>
+      <h1>Clear Lesson — <span class="muted">Straightforward Life Lessons</span></h1>
+      <p>Namaste! I am <strong>Vikram Kumar Azad</strong>. Yeh website mere book <em>Clear Lesson</em> aur meri services ke liye hai — seedhi baat, simple language, real impact.</p>
+      <div class="badges" style="margin-top:18px">
+        <a class="cta" href="#contact">Contact Now</a>
+        <a class="cta" style="background:linear-gradient(135deg,var(--accent),#ef4444)" href="#book">Read Sample</a>
+      </div>
+    </div>
+    <div class="cover card" id="book">
+      <div class="book">
+        <div class="title">
+          <h2>CLEAR LESSON</h2>
+          <small>Author: Vikram Kumar Azad</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about card">
+    <div style="padding:26px">
+      <h2 style="margin:0 0 6px">About Vikram</h2>
+      <p class="muted">Main simple aur seedhe shabdon me life lessons likhta hoon. Mera goal: har reader ko ek chhoti, practical seekh dena jo abhi ke abhi use ho sake.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES / SKILLS -->
+  <section id="services">
+    <h2 style="margin-top:0">What I Do</h2>
+    <div class="grid cols-3">
+      <div class="service card">
+        <h3>Life Lessons (Hindi/English)</h3>
+        <p class="muted">Short, powerful chapters for students & young professionals.</p>
+      </div>
+      <div class="service card">
+        <h3>Motivation & Guidance</h3>
+        <p class="muted">Clear roadmaps: habits, time management, and focus.</p>
+      </div>
+      <div class="service card">
+        <h3>Book & Website Help</h3>
+        <p class="muted">Outline, cover ideas, aur basic website setup guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI HELPER -->
+  <section id="ai" class="card" style="padding:26px">
+    <h2 style="margin:0 0 10px">🤖 AI Helper — Your Virtual Guide</h2>
+    <p class="muted">Yaha aap apna sawal type karo. Ye chhota sa on-page helper aapko turant simple tips dega. (Internet ke bina, sirf is page par hi.)</p>
+    <div class="ai">
+      <div>
+        <div id="chat" class="chat card"></div>
+        <div class="composer">
+          <input id="msg" placeholder="Type your question… (e.g., study tips, website, motivation)" />
+          <button id="send">Send</button>
+        </div>
+      </div>
+      <div class="card" style="padding:18px">
+        <h3 style="margin:8px 0">Quick Prompts</h3>
+        <div class="badges">
+          <button class="cta" type="button" data-prompt="How do I stop procrastinating?">Stop Procrastinating</button>
+          <button class="cta" type="button" data-prompt="Give me simple study tips">Study Tips</button>
+          <button class="cta" type="button" data-prompt="How to publish a small book?">Publish Book</button>
+        </div>
+        <p class="muted" style="margin-top:10px">Note: Ye demo helper hai. Real chat ke liye aap mujhse WhatsApp/Email par contact karein.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="card" style="padding:26px">
+    <h2 style="margin:0 0 10px">Contact</h2>
+    <form action="mailto:vikramazad@example.com" method="post" enctype="text/plain" class="contact">
+      <input class="input" type="text" name="name" placeholder="Your Name" required>
+      <input class="input" type="email" name="email" placeholder="Your Email" required>
+      <textarea class="input" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button class="cta" type="submit">Send Message</button>
+    </form>
+    <p class="muted" style="margin-top:10px">Email address ko apna actual address se replace karein.</p>
+  </section>
+
+  <footer>
+    <div class="social" style="margin-bottom:8px">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter</a>
+    </div>
+    <div>© <span id="year"></span> Vikram Kumar Azad • Clear Lesson</div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mini Chat Helper (client-side only)
+    const chat = document.getElementById('chat');
+    const msg = document.getElementById('msg');
+    const send = document.getElementById('send');
+
+    const replies = [
+      { test:/hello|hi|namaste/i, reply:"Namaste! Main aapki madad ke liye yahan hoon. Aap apna sawal seedhe type karein."},
+      { test:/procrastinat|delay|late| टाल/i, reply:"Procrastination se nikalne ke liye: (1) 10‑minute rule: bas 10 minute shuru karo, (2) phone door rakho, (3) kal ka ek chota next step likh kar sone jao."},
+      { test:/study|padh|exam/i, reply:"Study tips: 25‑minute focus + 5‑minute break (Pomodoro), ek topic per day, aur har raat 10 minute revision."},
+      { test:/website|github|netlify|vercel/i, reply:"Website steps: index.html banao → GitHub repo me upload karo → Settings > Pages > main/(root). 1‑2 minute me site live!"},
+      { test:/book|publish|kita(b|bh)/i, reply:"Book publish: (1) 20 short chapters, (2) PDF export, (3) Kindle Direct Publishing (kdp.amazon.com) par upload, (4) cover simple aur readable."},
+      { test:/motivation|down|sad|lose/i, reply:"Motivation low ho to action chota rakho: 5 pushups, 1 page reading, 1 call. Chota action hi badi energy banata hai."}
+    ];
+
+    function addBubble(text, who="you"){
+      const b = document.createElement('div');
+      b.className = `bubble ${who==='you'?'you':'bot'}`;
+      b.textContent = text;
+      chat.appendChild(b);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function botReply(q){
+      const match = replies.find(r=>r.test.test(q));
+      return match ? match.reply : "Seedha rule: chhote steps abhi se. Agar specific sawaal hai to About/Contact section dekho aur message bhejo. Main madad karunga!";
+    }
+
+    function sendMsg(){
+      const q = msg.value.trim();
+      if(!q) return;
+      addBubble(q,'you');
+      setTimeout(()=> addBubble(botReply(q),'bot'), 300);
+      msg.value='';
+      msg.focus();
+    }
+
+    send.addEventListener('click', sendMsg);
+    msg.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); sendMsg(); } });
+
+    // Quick prompts
+    document.querySelectorAll('[data-prompt]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{ msg.value = btn.dataset.prompt; msg.focus(); })
+    });
+  </script>
 </body>
 </html>
+
